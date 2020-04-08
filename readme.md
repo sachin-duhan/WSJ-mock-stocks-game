@@ -5,16 +5,18 @@
 ## Dependencies
 
 Install runtime and database.
-
-    sudo apt-get install nodejs mongodb
-
+```
+	sudo apt-get install nodejs mongodb
+```
 Install express.
-
-    npm install -g express
+```
+	npm install -g express
+```
 
 Install dependencies
-
-    npm install
+```
+	npm install
+```
 
 ## Database setup
 
