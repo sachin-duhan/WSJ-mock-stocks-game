@@ -1,0 +1,43 @@
+// preset form values if we receive a userdata object //
+- user = typeof(udata) != 'undefined' ? udata : { }
+// store the userId on the client side in a hidden input field //
+input(type='hidden', value= user._id)#userId
+
+#main.container-fluid
+    section.row
+        #headlines.main-sub.col-sm-6
+            h2 Headlines
+            ul#news-lines
+
+        #prices.main-sub.col-sm-6
+            h2 Prices
+            ul#price-lines
+
+    section.row
+        .main-sub.col-sm-6
+            h2 Transaction
+            form#transaction-form
+                label Number of shares : 
+                input(type="text", size="8", name="qty")
+                br
+                label Action : 
+                select(name="action")
+                    option(value="0") Sell
+                    option(value="1") Short Sell
+                    option(value="2") Buy
+                br
+                label Stock : 
+                select#stocks(name="stock")
+                br
+                br
+                input.btn.btn-success(type="submit", value="Execute")
+        .main-sub.col-sm-6
+            h2 Account
+            #account-info
+                ul
+                #balance
+
+
+// display form errors in a custom modal window //
+
+include modals/form-errors

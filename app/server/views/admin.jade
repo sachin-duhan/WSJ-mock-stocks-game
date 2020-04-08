@@ -1,0 +1,35 @@
+
+extends layout
+
+block content
+
+    nav.navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+                .navbar-brand The Wall Street Journal
+            ul.nav.navbar-nav.navbar-right
+                li
+                    .navbar-btn.btn.btn-warning.info
+                        | State : 
+                li
+                    .navbar-btn.btn.btn-success.info
+                        | Round : 
+                li
+                    .navbar-btn.btn.btn-info.info
+                        | Time : 
+                li
+                    .navbar-btn#btn-logout.btn.btn-default
+                        | Sign Out
+
+    include profile
+    include modals/alert
+    include modals/confirm
+
+block scripts
+    script(src='/vendor/jquery-2.2.3.min.js')
+    script(src='/vendor/jquery.form.min.js')
+    script(src='/vendor/bootstrap.min.js')
+    script(src='/vendor/socket.io-1.4.5.js')
+    script(src='/js/views/home.js')
+    script(src='/js/controllers/homeController.js')
+    script(src='/js/form-validators/accountValidator.js')
