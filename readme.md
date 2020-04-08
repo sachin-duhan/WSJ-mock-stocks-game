@@ -1,4 +1,4 @@
-# mockstocks
+# MOCKSTOCKS - GAME APPLICATION
 
 ### A basic webapp for conducting a somewhat automated stock trading event.
 
